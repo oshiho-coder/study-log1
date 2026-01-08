@@ -8,41 +8,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style_answer.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
+    <header>
+        <div class="mainvisual">
+            <img src="img/mainvisual.jpg" alt="食卓">
+        </div>
+    </header>
 
-    <div class="mainvisual">
-        <img src="img/mainvisual.jpg">
-    </div>
-
-    <div class="top-text">
-        <h1 class="title">Recipe Diary</h1>
-        <p>日々の料理レシピをまとめています。<br>
+    <main>
+        <section class="top-text">
+            <h1 >Recipe Diary</h1>
+            <p>日々の料理レシピをまとめています。<br>
             和食や洋食、中華、お菓子までいろいろな料理レシピをアップしていますので、<br>
             みなさんの献立にお役立てくださいね！</p>
-    </div>
+        </section>
 
-    <div class="photos-dish">
-        <img src="img/recipe1.jpg">
-        <img src="img/recipe2.jpg">
-        <img src="img/recipe3.jpg">
-    </div>
+        <section class="photos-dish">
+            <img src="img/recipe1.jpg" alt="串">
+            <img src="img/recipe2.jpg" alt="エビ">
+             <img src="img/recipe3.jpg" alt="水餃子">
+        </section>
 
-    <div class="btn-parent">
-        <a href="#" class="btn">レシピ一覧を見る</a>
-    </div>
+        <section class="btn-parent">
+            <a href="#" class="btn">レシピ一覧を見る</a>
+        </section>
 
-    <ul class="sns-list">
-        <li><a href="#" target="_blank">instagram</a></li>
-        <li><a href="#" target="_blank">twitter</a></li>
-        <li><a href="#" target="_blank">facebook</a></li>
-    </ul>
+        <section class="sns-parent">
+            <ul class="sns-list">
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">facebook</a></li>
+            </ul>
+        </section>
+    </main>
 
-    <footer>
-        <small>© 2021 Recipe Diary</small>
-    </footer>
+<footer>
+    <small>&copy; 2021 Recipe Diary</small>
+</footer>
+
 
 </body>
 
