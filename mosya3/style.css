@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+body {
+    color: #2d2d2d;
+    /*「Crimson Text」のCSSのコードをここにはりましょう！*/
+  font-family: "Crimson Text", serif;
+}
+
+
+
+html {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+:root {
+  --padding: 4%;
+}
+  
+
+  /*mainvisual*/
+  
+  .mainvisual {
+    padding: var(--padding);
+    padding-bottom: 0;
+  }
+
+  .mainvisual img{
+    width: 100%;
+  }
+  
+  /* header */
+
+  header {
+    padding: 30px 4%;
+  }
+
+  header img {
+    margin-right: 2rem;
+  }
+  
+  .logo {
+    width: 7rem;
+  }
+
+  header .list {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  
+  header h1 {
+    line-height: 0;
+  }
+
+  header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+header a {
+    color: #000;
+  }
+
+/* main */
+
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 4%;
+}
+
+/* .content { */
+  /* margin:  0 auto; */
+  /* margin-block: 2rem; */
+/* } */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-block: 2rem;
+}
+
+
+.contents {
+  /* border: 1px solid #427cc7; */
+  display: flex;
+  align-items: center;
+}
+
+.contents img {
+  width: 50%;
+}
+
+.contents .text {
+  width: 50%;
+  padding: 0 5%;
+}
+
+.contents .text h2 {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.contents .text h3 {
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* responsive */
+
+@media (max-width: 767px) {
+
+  .mainvisual {
+    padding: 0;
+  }
+
+  .mainvisual img {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .contents{
+    flex-direction: column;   
+    align-items: stretch;   
+  }  
+  
+  .content img,
+  .contents .text {
+    width: 100%;
+  }
+
+  .contents img {
+    order: 1;
+  }
+
+  .contents .text {
+    order: 2;
+  }
+
+  .contents {
+    margin-block: 1rem;
+  }
+
+  .contents .text {
+    padding-top: 2rem;
+  }
+}
