@@ -35,7 +35,7 @@ header {
     padding-block: 8rem;
 }
 
-.link-list ol{
+.link-list ul{
     display: flex;
     gap:1.5rem;
     list-style: none;
@@ -68,7 +68,7 @@ header {
 
 /* main */
 
-.container h2 {
+.container .section-title {
     text-align: center;
     margin-block: 3rem;
 }
@@ -116,18 +116,18 @@ header {
     border-top: 1px solid #ccc;
 }
 
-.news dl {
+.news-item {
     display: flex;
     flex-wrap: wrap;
 }
 
-.news dt {
+.news-item dt {
     width: 20%;
     border-bottom:1px solid #ccc;
     padding: 1rem;
 }
 
-.news dd {
+.news-item dd {
     width: 80%;
     border-bottom:1px solid #ccc;
     padding: 1rem;
