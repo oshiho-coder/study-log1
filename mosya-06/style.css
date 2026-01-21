@@ -72,10 +72,97 @@ header {
 /* main */
 
 .info {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.item__left,
+.item__left img {
+    width: 5rem;
+}
+
+.item__left {
+    width: 50%;
+}
+
 .item__right {
     width: 50%;
+}
+
+/* item__info */
+
+.item__info .item__title {
+    padding-block: 1.5rem;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.item__info .item__text {
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+.item__info .item__price {
+    margin-block: 2rem;
+}
+
+.item__info .item__title h2 {
+    font-size: 1rem;
+}
+
+.item__info .item__text p {
+    font-size: 0.5rem;
+}
+
+/* size__option */
+
+.option__table table {
+    border-collapse: collapse;
+}
+
+.option__table {
+    width: 100%;
+}
+
+.option__table .color,
+.option__table .size {
+    width: 20%;
+}
+
+.option__table .sample {
+    width: 60%;
+}
+
+.option__table td {
+    border-bottom: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.option__table td:last-child {
+  border-right: none;
+}
+
+.option__table tr:last-child td {
+  border-bottom: none;
+}
+
+.option__table select {
+  width: 100%;
+  padding-inline: 0.5rem;
+  appearance: menulist;
+}
+
+.cart__btn {
+    background-color: #4b4b4b;
+    width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+    margin-block: 1rem;
+}
+
+.cart__btn a{
+    color: #fff;
 }
