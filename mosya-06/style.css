@@ -76,6 +76,7 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 8rem;
 }
 
 .item__left img {
@@ -107,12 +108,12 @@ header {
     margin-block: 2rem;
 }
 
-.item__info .item__title h2 {
+.item__info h2 {
     font-size: 1rem;
 }
 
-.item__info .item__text p {
-    font-size: 0.5rem;
+.item__info p {
+    font-size: 0.75rem;
 }
 
 /* size__option */
@@ -123,6 +124,7 @@ header {
 
 .option__table {
     width: 100%;
+    font-size: 0.75rem;
 }
 
 .option__table .color,
@@ -151,6 +153,7 @@ header {
 
 .option__table select {
   width: 100%;
+  border: solid 1px #c3c3c3;
   padding-inline: 0.5rem;
   appearance: menulist;
 }
@@ -165,4 +168,84 @@ header {
 
 .cart__btn a{
     color: #fff;
+    font-size: 0.75rem;
+}
+
+/* size__info */
+
+.size__info {
+    font-size: 0.75rem;
+}
+
+.size__info table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.size__info .size {
+    width: 10%;
+}
+
+.size__info .cheat,
+.size__info .weist,
+.size__info .heigt {
+    width: 30%;
+}
+
+.size__info th,
+.size__info td {
+    text-align: center;
+    border: 1px solid #E1E1E1;
+    padding: 0.75rem 1rem;
+}
+
+.size__info th {
+    font-weight: normal;
+    background-color: #ECEBEB;
+}
+
+/* footer */
+
+footer {
+    font-size: 0.5rem;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+/* responsive*/
+@media (max-width: 800px) {
+
+    .info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    }
+
+    .size__option .option__table table {
+        width:  100%;
+    }
+
+    .cart__btn {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .size__info .size {
+        width: 17%;
+}
+
+    .size__info .cheat,
+    .size__info .weist,
+    .size__info .heigt {
+        width: 28%;
+}
+
+}
+
+@media (max-width: 515px) {
+    .heading__list {
+    overflow-x: scroll;
+     }
 }
