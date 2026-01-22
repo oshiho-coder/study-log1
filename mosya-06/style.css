@@ -33,7 +33,7 @@ img {
 header {
     max-width: 1000px;
     margin-inline: auto;
-    padding-inline: auto;
+    /* padding-inline: auto; */
     border-bottom: 1px solid #E1E1E1;
 }
 
@@ -79,17 +79,18 @@ header {
     margin-bottom: 8rem;
 }
 
-.item__left img {
-    width: 5rem;
+.info__left img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.item__left {
+/* .info__left {
     width: 50%;
 }
 
-.item__right {
+.info__right {
     width: 50%;
-}
+} */
 
 /* item__info */
 
@@ -136,13 +137,16 @@ header {
     width: 60%;
 }
 
+.option__table th,
 .option__table td {
     border-bottom: 1px solid #E1E1E1;
     border-right: 1px solid #E1E1E1;
     padding: 0.75rem 1rem;
     text-align: center;
+    font-weight: normal;
 }
 
+.option__table th:last-child,
 .option__table td:last-child {
   border-right: none;
 }
@@ -188,7 +192,7 @@ header {
 
 .size__info .cheat,
 .size__info .weist,
-.size__info .heigt {
+.size__info .height {
     width: 30%;
 }
 
@@ -216,11 +220,8 @@ footer {
 @media (max-width: 800px) {
 
     .info {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 8rem;
     }
 
     .size__option .option__table table {
@@ -238,7 +239,7 @@ footer {
 
     .size__info .cheat,
     .size__info .weist,
-    .size__info .heigt {
+    .size__info .height {
         width: 28%;
 }
 
