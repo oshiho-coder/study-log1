@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    padding-left: 4%;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+.header__left {
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+}
+
+.site__title {
+    width: 10rem;
+    margin-right: 2rem;
+}
+
+.left__list ul{
+    display: flex;
+}
+
+.left__list li {
+    padding-inline: 1rem;
+}
+
+.left__list a {
+    color: #000;
+}
+
+.header__right {
+    height: 5rem;
+    background: #000;
+    width: 10rem;
+    text-align: center;
+    
+}
+
+.header__right a {
+    line-height:4rem;
+    color: #fff;
+}
+
+.header__right a:hover {
+  opacity: 0.7;
+}
+
+/* 共通 */
+
+.container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+main {
+    background-color: #F0F0F0;
+}
+
+section {
+  margin-bottom: 10rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.en {
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 0.75rem;
+}
+
+.ja {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 0.3rem;
+}
+
+.heading-line {
+    width: 3rem;          
+    height: 1px;
+    background: #000;
+    margin-top: 1rem;
+}
+
+/* main */
+
+.mainvisual {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    
+}
+
+.mainvisual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* news */
+.news__contents {
+    display: flex;
+}
+
+.news__contents li {
+    margin-right: 3rem;
+}
+
+
+/* business */
+
+/* conpany */
+
+/* footer */
+
+/* sp */
+@media (max-width: 900px) {
+    
+    /* header */
+    .header__right {
+        display: none;
+    }
+
+    header {
+    height: 5rem;
+    padding-left: 0;
+    }
+
+    .header__left {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 1rem;
+    }
+
+    .site__title {
+        width: 5rem;
+        margin-left: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .left__list a {
+        font-size: 0.75rem;
+    }
+
+    /* main */
+    .mainvisual {
+    margin-bottom: 0;
+    }
+
+}
