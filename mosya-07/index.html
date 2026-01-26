@@ -16,7 +16,7 @@
 <body>
 <header>
     
-    <nav class="header__left">
+    <div class="header__left">
 
         <h1 class="site__title">
             <a href="#">
@@ -24,19 +24,19 @@
             </a>
         </h1>
 
-        <div class="left__list">
+        <nav class="left__list">
             <ul>
                 <li><a href="#">NEWS</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">BUSINESS</a></li>
                 <li><a href="#">COMPANY</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
-    <nav class="header__right">
+    <div class="header__right">
         <a href="#">お問い合わせ</a>
-    </nav>
+    </div>
 </header>
 
 <main>
@@ -61,7 +61,7 @@
             
             <li class="news__content">
                 <a href="#">
-                    <time class="news__date">2021.01.01<span class="news__category">NEWS</span></time>
+                    <time class="news__date">2021.01.01<span class="news__category">PRESS</span></time>
                     <h3 class="news__text">タイトルタイトルタイトルタイトル</h3>                   
                 </a>
             </li>
@@ -76,9 +76,118 @@
 
     </section>
 
+    <section class="about">
+        <div class="about__img">
+            <img src="img/about.jpg" alt="タイルと靴">
+        </div>
+
+        <div class="about__text">
+            <h2 class="about__heading title">
+                <span class="en">ABOUT</span>
+                <span class="ja">私たちについて</span>
+                <span class="heading-line"></span>
+            </h2>
+
+            <div class="about__info">
+                <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
+                <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
+                <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="business container">
+        <h2 class="business__heading title">
+                <span class="en">BUSINESS</span>
+                <span class="ja">事業内容</span>
+                <span class="heading-line"></span>
+        </h2>
+
+        <div class="business__items">
+            <div class="business__item left">
+                <p class="business__text">Web制作・マーケティング</p>
+                <div class="item__img">
+                    <img src="img/business1.jpg" alt="Web制作">
+                </div>
+
+                <p class="business__text">インターネットメディア事業</p>
+                <div class="item__img">
+                    <img src="img/business2.jpg" alt="インターネットメディア事業">
+                </div>
+            </div>
+
+            <div class="business__item right">
+                <p class="business__text">プロモーション企画・制作</p>
+                <div class="item__img">
+                    <img src="img/business3.jpg" alt="制作">
+                </div>
+
+                <p class="business__text">ソーシャル企画・運営</p>
+                <div class="item__img">
+                    <img src="img/business4.jpg" alt="企画・運営">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="company container">
+        <div class="company__info">
+            <h2 class="company__heading title">
+                <span class="en">COMPANY</span>
+                <span class="ja">会社</span>
+                <span class="heading-line"></span>
+            </h2>
+            
+            <dl class="company__history">
+                <dt>会社名</dt>
+                <dd>ウェブエンターテイメントデザイン株式会社</dd>
+                
+                <dt>所在地</dt>
+                <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
+                
+                <dt>代表</dt>
+                <dd>ＸＸＸＸＸＸ</dd>
+                
+                <dt>設立</dt>
+                <dd>2021年1月1日</dd>
+                
+                <dt>資本金</dt>
+                <dd>3,000,000円</dd>
+                
+                <dt>事業内容</dt>
+                <dd>Web制作・マーケティング</dd>
+                <dd class="add">インターネットメディア事業</dd>
+                <dd class="add">プロモーション企画・制作</dd>
+                <dd class="add">ソーシャル企画・運営</dd>
+            </dl>
+        </div>
+
+        <div class="company__img">
+            <img src="img/company.jpg" alt="カンパニー画像">
+        </div>
+    </section>
+
 </main>
 
-<footer></footer>
+<footer class="container">
+    <div class="footer__top container">
+        <div class="site__title">
+            <a href="#">
+                <img src="img/logo.svg" alt="ロゴ">
+            </a>
+        </div>
+
+        <div class="contact">
+                <p>Web Entertainment Design Inc.</p>
+                <p>West Building 3F</p>
+                <p>9-99 Sakuragaokacho Shibuya-ku</p>
+                <p>Tokyo, Japan 150-0031</p>
+                <p>T/99-9999-9999</p>
+        </div>
+    </div>
+
+    <small class="footer__bottom">&copy; Web Entertainment Design Inc.</small>
+</footer>
 
 </body>
 
