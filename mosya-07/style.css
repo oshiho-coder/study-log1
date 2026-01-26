@@ -25,7 +25,7 @@ header {
     display: flex;
     justify-content: space-between;
     height: 5rem;
-    padding-left: 4%;
+    /* padding-left: 4%; */
     align-items: center;
     background: #f0f0f0;
 }
@@ -38,8 +38,12 @@ header {
     align-items: center;
 }
 
+.header__left h1 {
+    line-height: 0;
+}
+
 .site__title {
-    width: 10rem;
+    width: 6rem;
     margin-right: 2rem;
 }
 
@@ -56,21 +60,23 @@ header {
 }
 
 .header__right {
-    height: 5rem;
-    background: #000;
-    width: 10rem;
-    text-align: center;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding-inline: 5rem;
+    padding-block: 1.75rem;
 }
 
 .header__right a {
-    line-height:4rem;
+    /* line-height: 5rem; */
     color: #fff;
 }
 
-.header__right a:hover {
-  opacity: 0.7;
+.header__right:hover {
+    opacity: 0.7;
 }
+
 
 /* 共通 */
 
@@ -85,13 +91,18 @@ main {
 }
 
 section {
-  margin-bottom: 10rem;
+    margin-bottom: 10rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
 }
 
 .title{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 3rem;
 }
 
 .en {
@@ -130,30 +141,197 @@ section {
 /* news */
 .news__contents {
     display: flex;
+    justify-content: start;
+    margin-top: 3rem;
+}
+
+.news__content {
+    padding-right: 5rem;
+    border-right: 1px solid #000;
+}
+
+.news__content:last-child {
+    border-right: none;
 }
 
 .news__contents li {
-    margin-right: 3rem;
+    padding-block: 1rem ;
+    padding-left: 1rem;
 }
 
+.news__content a {
+    color: #000;
+    font-weight: normal;
+}
+
+.news__content h3 {
+    color: #000;
+    font-weight: normal;
+    font-size: 0.75rem;
+    padding-top: 1rem;
+}
+
+.news__category {
+    background-color: #000;
+    color: #fff;
+    padding-inline: 0.5rem;
+    margin-left: 1rem;
+}
+
+/* about */
+.about {
+    display: flex;
+}
+
+.about__img {
+    width: 55%;
+}
+
+.about img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.about__text {
+    margin-top: 10rem;
+    padding-inline: 3%;
+}
+
+.about__info p {
+    margin-bottom: 1rem;
+}
 
 /* business */
+.business__items {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5%;
+  row-gap: 8rem;
+  /* border: 1px solid; */
+}
 
-/* conpany */
+.business__item img {
+    width: 100%;
+}
+
+.business__item.left {
+    grid-column: 1;
+}
+
+.business__item.right {
+    grid-column: 2;
+}
+
+.business__item.left:first-of-type {
+    margin-top: 5rem;
+}
+
+.left {
+    margin-top: 10rem;
+}
+
+.business__text {
+    position: relative;
+    margin-top: 2rem;
+    padding-block: 0.5rem;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.business__text::before {
+    position: absolute;
+    left: 0;
+    content: "-";
+}
+
+/* company */
+.company {
+    /* border: 1px solid; */
+    display: flex;
+    align-items:center;
+    padding-bottom: 8rem;
+}
+
+.company__info {
+    width: 65%;
+    background: #FFFFFF;
+    padding: 4rem 4rem;
+}
+
+.company__img {
+    width: 60%;
+    margin-left: -40px;
+}
+
+.company__img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.company__info dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.company__info dt {
+    width: 20%;
+    margin-bottom: 0.5rem;
+}
+
+.company__info dd {
+    width: 80%;
+    margin-bottom: 0.5rem;
+}
+
+.company__info .add {
+    margin-left: 20%;
+}
 
 /* footer */
+footer {
+    padding: 2rem;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.footer__top p {
+    font-size:  0.75rem;
+}
+
+.footer__bottom {
+    font-size: 0.75rem;
+    padding-left: 1rem;
+}
 
 /* sp */
 @media (max-width: 900px) {
     
+    section {
+        margin-bottom: 3rem;
+    }
+
+    .title{
+        margin-bottom: 1.5rem;
+    }
+
     /* header */
     .header__right {
         display: none;
     }
 
     header {
-    height: 5rem;
-    padding-left: 0;
+        height: 5rem;
+        padding-left: 0;
     }
 
     .header__left {
@@ -164,7 +342,7 @@ section {
 
     .site__title {
         width: 5rem;
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
         margin-bottom: 0.25rem;
     }
 
@@ -174,7 +352,126 @@ section {
 
     /* main */
     .mainvisual {
-    margin-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /* news */
+    .news {
+        margin-top: 4rem;
+    }
+
+    .news__contents {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .news__content {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .news__contents li {
+        margin-block: 0;
+        padding-left: 0;
+    }
+
+    /* about */
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .about__img {
+        width: 100%;
+    }
+
+    .about__text {
+        margin-top: 3rem;
+        padding-inline: 1%;
+    }
+
+    /* business */
+    .business__items {
+        grid-template-columns: 1fr;
+        margin-top: 0;       
+        row-gap: 0;
+    }
+    
+    .business__item.left,
+    .business__item.right {
+        grid-column: auto;   
+        margin-top: 0;       
+    }
+
+    .business__item.left:first-of-type {
+        margin-top: 0;
+    }
+
+    .business__text {
+        margin-top: 0;
+        padding-block: 0.5rem;
+    }
+
+    .business__item .item__img {
+        margin-bottom: 1rem;
+    }
+
+    /* company */
+    .company {
+        /* border: 1px solid; */
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 5rem;
+
+    }
+
+    .company__info {
+        width: 100%;
+        background: #FFFFFF;
+        padding: 2rem 2rem;
+    }
+
+    .company__img {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .company__info dl {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .company__info dt {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .company__info dd {
+        width: 80%;
+        margin-bottom: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .company__info .add {
+        margin-left: 1rem;
+    }
+
+    /* footer */
+    .footer__top {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+    }
+
+    .footer__top .site__title {
+        margin-bottom: 1rem;
+    }
+
+    .footer__top p {
+        font-size:  0.75rem;
     }
 
 }
+
+
