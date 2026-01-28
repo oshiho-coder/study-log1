@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* 共通 */
+.container {
+    width: 1000px;
+    margin-inline: auto;
+    padding-inline: 1%;
+    text-align: center;
+}
+
+
+.fixed__bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;    
+}
+
+.sec__title {
+    width: 100%;
+    color: #fff;
+    font-size: 5rem;
+    padding-inline: 4%;
+    padding-block: 6.5rem;
+    text-align: center;
+    filter: drop-shadow(1px 1px 1px #ffffff);
+}
+
+.item__title {
+    display: inline-block;
+    font-size: 2.5rem;
+    border-bottom: 5px solid #f72222;
+    margin-bottom: 5rem;
+}
+
+/* header */
+
+header {
+    background-image: url(/img/mainvisual.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 1.5rem 4%;
+    position: relative;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__list li {
+    padding-inline: 1rem;
+}
+
+.nav__list a {
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+    /* filter: drop-shadow(2px 2px 4px #000); */
+}
+
+.nav__list a:hover {
+    color: #f72222;
+}
+
+.site__title {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+    filter: drop-shadow(1px 1px 1px #ffffff);
+}
+
+/* main */
+
+/* memu */
+
+.menu {
+    margin-top: 1rem;
+}
+
+.menu__img {
+    background-image: url(..//img/menu.jpg);
+    width: 100%;
+    height: 30vh;
+    /* border: 1px solid red; */
+}
+
+.menu__items {
+    display: flex;
+    padding-block: 6rem;
+}
+
+.menu__coffee,
+.menu__sub {
+    width: 50%;
+    padding-inline: 4%;
+}
+
+.menu__items dl {
+    display:flex;
+    flex-wrap:wrap;    
+}
+
+.food__list {
+    margin-bottom: 3rem;
+}
+
+.coffee__list dt,
+.food__list dt,
+.other__list dt {
+    width: 90%;
+    text-align: start;
+    border-bottom: 1px dotted #000;
+    margin-bottom: 1.5rem;
+}
+
+.coffee__list dd,
+.food__list dd,
+.other__list dd {
+    width: 10%;
+}
+
+
+
+/* about */
+
+.about__img {
+    background-image: url(..//img/about.jpg);
+    width: 100%;
+    height: 30vh;
+    /* border: 1px solid red; */
+}
+
+.about__info {
+    padding-block: 6rem;
+}
+.about__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about__text li {
+    text-align: left;
+}
+
+.read__btn {
+    margin-top: 2rem;
+}
+
+.read__btn a {
+  text-decoration: none;
+  text-align: center; 
+}
+
+.btn {
+  width: 160px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  color: #000;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.btn span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+.btn span::before,
+.btn span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+.btn::before,
+.btn span::before {
+  width: 3px;
+  height: 50%;
+}
+.btn::after,
+.btn span::after {
+  width: 20%;
+  height: 2px;
+}
+
+.btn:hover::before,
+.btn span:hover::before {
+  height: 100%;
+}
+
+.btn:hover::after,
+.btn span:hover::after {
+  width: 100%;
+}
+
+/* location */
+
+.location__img {
+    background-image: url(..//img/location.jpg);
+    width: 100%;
+    height: 30vh;
+    /* border: 1px solid red; */
+}
+
+.location__info {
+    padding-block: 6rem;
+    padding-inline: 1rem;
+}
+
+.store {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.store li {
+    padding-block: 0.5rem;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* sp */
+@media (max-width: 767px) {
+    .sec__title {
+        padding-inline: 0;
+        font-size: 3rem;
+    }    
+
+    .fixed__bg {
+        background-attachment: scroll;
+    }
+    
+    .container {
+        padding-inline: 4%;
+    }
+}
