@@ -6,6 +6,7 @@ html {
 
 body {
     font-family: "Noto Sans", sans-serif;
+    margin-top: 7rem;
 }
 
 a {
@@ -90,9 +91,7 @@ nav ul{
 
 /* main */
 
-main {
-    margin-top: 7rem;
-}
+
 
 /* heading */
 .heading {
@@ -139,15 +138,19 @@ main {
     margin-bottom: 1rem;
 }
 
-.main__item ul {
+.article__title a {
+    color: #000;
+}
+
+.main__list {
     display: flex;
 }
 
-.main__item li {
+.main__list li {
     padding-right: 1rem;
 }
 
-.main__item a {
+.main__list a {
     color: #000;
 }
 
@@ -210,6 +213,9 @@ main {
     padding-block: 1.5rem;
     padding-inline: 1.5rem;
     border-top: 0.5px solid #333;
+}
+
+.archive__list li:last-child {
     border-bottom: 0.5px solid #333;
 }
 
