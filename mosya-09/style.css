@@ -21,7 +21,7 @@ img {
 
 /* 共通 */
 .container {
-    width: 1000px;
+    max-width: 1000px;
     margin-inline: auto;
     padding-inline: 1%;
     text-align: center;
@@ -37,9 +37,9 @@ img {
 .sec__title {
     width: 100%;
     color: #fff;
-    font-size: 5rem;
+    font-size: 4.5rem;
     padding-inline: 4%;
-    padding-block: 6.5rem;
+    padding-block: 4.5rem;
     text-align: center;
     filter: drop-shadow(1px 1px 1px #ffffff);
 }
@@ -54,7 +54,7 @@ img {
 /* header */
 
 header {
-    background-image: url(/img/mainvisual.jpg);
+    background-image: url(../img/mainvisual.jpg);
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -86,7 +86,7 @@ header {
 .site__title {
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 30%;
     transform: translateY(-50%);
     filter: drop-shadow(1px 1px 1px #ffffff);
 }
@@ -100,7 +100,7 @@ header {
 }
 
 .menu__img {
-    background-image: url(..//img/menu.jpg);
+    background-image: url(../img/menu.jpg);
     width: 100%;
     height: 30vh;
     /* border: 1px solid red; */
@@ -146,7 +146,7 @@ header {
 /* about */
 
 .about__img {
-    background-image: url(..//img/about.jpg);
+    background-image: url(../img/about.jpg);
     width: 100%;
     height: 30vh;
     /* border: 1px solid red; */
@@ -235,7 +235,7 @@ header {
 /* location */
 
 .location__img {
-    background-image: url(..//img/location.jpg);
+    background-image: url(../img/location.jpg);
     width: 100%;
     height: 30vh;
     /* border: 1px solid red; */
@@ -244,6 +244,10 @@ header {
 .location__info {
     padding-block: 6rem;
     padding-inline: 1rem;
+}
+
+.map iframe {
+    width: 100%;
 }
 
 .store {
@@ -266,7 +270,19 @@ footer {
     .sec__title {
         padding-inline: 0;
         font-size: 3rem;
-    }    
+        padding-block: 1.5rem;
+    }
+    
+    .menu__img,
+    .about__img,
+    .location__img {
+        height: 10vh;
+    }
+
+    .item__title  {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
 
     .fixed__bg {
         background-attachment: scroll;
@@ -274,5 +290,25 @@ footer {
     
     .container {
         padding-inline: 4%;
+    }
+
+    .menu__items {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu__coffee,
+    .menu__sub {
+        width: 100%;
+    }
+
+    .about__text {
+        grid-template-columns: 1fr;
+    }
+
+    .menu__items,
+    .about__info,
+    .location__info {
+        padding-block: 1rem;
     }
 }
