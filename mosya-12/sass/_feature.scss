@@ -1,0 +1,51 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+// feature
+#feature {
+    max-width: 1250px;
+    padding: 6rem 1rem 3rem;
+    margin: auto;
+
+    @include m.bp{
+        padding: 5rem 1rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 1.5rem;
+
+        .item {
+            transition: all 0.3s ease;
+            box-shadow:  0 0 0.5rem 0.25rem #ccc;
+        }
+
+        .img {
+            display: block;
+        }
+
+        .item__content {
+            padding: 2rem;
+            
+            @include m.bp{
+                padding: 1rem;
+            }
+
+            .item__cat {
+                font-size: 0.75rem ;
+                padding-bottom: 1.5rem;
+            }
+            .item__text {
+                font-weight: bold;
+                padding-bottom: 1.5rem;
+            }
+            .item__date {
+                font-size: 0.75rem;
+                text-align: right;
+            }
+
+        }
+    }
+
+}

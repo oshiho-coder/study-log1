@@ -1,0 +1,39 @@
+@use 'mixin' as m;
+@use 'variables' as v;
+
+/*
+フェード表示させる要素に使用するためのクラス
+*/
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.site__title {
+  line-height: 1px;
+
+    a {
+    display: block;
+  }
+}
+.sec__title {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @include m.bp{
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+// video
+#bg__video {
+    width: 100%;
+
+    @include m.bp{
+        height: 100vh;
+        object-fit: cover;
+    }
+}

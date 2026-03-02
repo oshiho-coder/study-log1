@@ -1,0 +1,74 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+// contact
+#contact {
+    color: #fff;
+    background-color: #121212;
+    padding: 3rem 1rem;
+
+    @include m.bp{
+        padding: 5rem 1rem;
+    }
+
+    .sec__title {
+        color: #fff;
+    }
+
+    .content {
+        max-width: 1250px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include m.bp{
+            flex-direction: column;
+        }
+
+        .contact__info {
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .contact__info,
+        .contact__form {
+            width: 45%;
+
+            @include m.bp{
+                width: 100%;
+            }
+        }
+
+        .contact__form {
+            input,
+            textarea{
+                width: 100%;
+                background-color: #fff;
+                padding: 0.75rem;
+                margin-bottom: 1.5rem;
+
+                @include m.bp{
+                    width: 100%;
+                }
+            }
+
+            .button {
+                input {
+                    width: 100%;
+                    color: #fff;
+                    background-color: #121212;
+                    padding: 0.75rem 0;
+                    border: solid 1px #fff;
+                    margin-bottom: 0;
+
+                    &:hover {
+                        color: #202020;
+                        background-color: v.$white;
+                    }
+                }
+            }
+        }
+    }
+
+}

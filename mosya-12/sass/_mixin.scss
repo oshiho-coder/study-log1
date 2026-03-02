@@ -1,0 +1,7 @@
+$bp: 600px;
+
+@mixin bp {
+    @media(max-width: $bp) {
+        @content;
+    }
+}
