@@ -1,0 +1,88 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+@keyframes slidein-left {
+
+0%{
+    transform: translateX( -100%) ;
+    opacity: 0;
+}
+100%{
+    transform: translateX( 0) ;
+    opacity: 1;
+}
+}
+
+@keyframes slidein-right {
+
+0%{
+    transform: translateX( 100%) ;
+    opacity: 0;
+}
+100%{
+    transform: translateX( 0) ;
+    opacity: 1;
+}
+}
+
+#reason {
+    margin-bottom: 8rem;
+    
+    .bg {
+        background-color: v.$red;
+        padding: 5rem 0;
+    }
+
+    .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        background-color: v.$white;
+        padding: 5%;
+        opacity: 0;
+
+        @include m.sp {
+            width: 98%;
+        }
+
+        img {
+            width: auto;
+            height: 4rem;
+            margin-right: 2rem;
+        }
+
+        .title {
+            color: v.$red;
+            font-size: 1.75rem;
+            display: block;
+            font-weight: bold;
+        }
+
+        .text {
+            font-size: 1.15rem;
+            display: block;
+        }
+    }
+    
+    .inview-slide-left {
+        margin-bottom: 5rem;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+
+    }
+    
+    .slidein-left {
+        animation: slidein-left 1s ease-out 1 forwards;    
+    }
+    
+    .inview-slide-right {
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        margin-left: auto;
+    }
+    
+    .slidein-right{
+        animation: slidein-right 1s ease-out 1 forwards; 
+    }
+}

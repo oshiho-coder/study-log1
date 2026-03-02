@@ -1,0 +1,37 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.entry {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .catchphrase {
+        margin-bottom: 1rem;
+    }
+
+    .btn{
+            background-color: v.$red;
+            border: solid 3px v.$red;
+            border-radius: 40px;
+            color: v.$white;
+            display: block;
+            font-size: 1.75rem;
+            font-weight: bold;
+            padding: 1rem;
+            transition: 0.3s;
+            position: relative;
+            
+            &:hover {
+                background-color: v.$white;
+                color: v.$red;
+            } 
+    }
+
+    
+}

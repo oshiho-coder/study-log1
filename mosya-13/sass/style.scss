@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+@use '_mixin.scss' as m;
+@use '_variables.scss' as v;
+@use '_common.scss';
+@use '_reset.scss';
+
+@use '_header.scss';
+@use '_mainvisual.scss';
+@use '_reason.scss';
+@use '_voice.scss';
+@use '_summary.scss';
+@use '_entry.scss';
+@use '_footer.scss';
+

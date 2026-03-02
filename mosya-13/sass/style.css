@@ -1,0 +1,260 @@
+.wrapper {
+  width: 100%;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.sec__title {
+  font-size: 2.25rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  position: relative;
+}
+.sec__title::after {
+  position: absolute;
+  content: "";
+  width: 6rem;
+  height: 3px;
+  background-color: #333333;
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+header {
+  padding: 2.5rem 0 0 3rem;
+  height: 6.25rem;
+}
+header .site__title {
+  width: 6.25rem;
+}
+header .site__title a {
+  display: block;
+}
+header.open #navi {
+  opacity: 1;
+  visibility: visible;
+}
+header.open .hamburger span {
+  background-color: #fff;
+}
+header.open .hamburger span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+header.open .hamburger span:nth-child(2), header.open .hamburger span:nth-child(3) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+header .hamburger {
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: #FF2A2A;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .hamburger:hover {
+  opacity: 0.7;
+}
+header .hamburger span {
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  left: 25%;
+  transition: all 0.3s;
+}
+header .hamburger span:nth-child(1) {
+  top: 36%;
+}
+header .hamburger span:nth-child(2) {
+  top: 50%;
+}
+header .hamburger span:nth-child(3) {
+  top: 64%;
+}
+header #navi {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  background-color: #FF2A2A;
+  color: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  text-align: center;
+  transition: all 0.6s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+header #navi .logo {
+  width: 6.25rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 3rem;
+}
+header #navi .menu {
+  margin: 4rem 0 2.5rem;
+}
+header #navi .menu li {
+  margin-bottom: 1.5rem;
+}
+header #navi .menu a {
+  color: #fff;
+  font-weight: bold;
+}
+header #navi .btn {
+  width: 15rem;
+  border: solid 1px #fff;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1rem 0;
+  transition: 0.3s;
+  position: relative;
+}
+header #navi .btn::after {
+  position: absolute;
+  content: "";
+  width: 15rem;
+  border-right: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  padding: 1rem;
+  right: -0.5rem;
+  bottom: -0.5rem;
+}
+header #navi .btn:hover {
+  background-color: #fff;
+  color: #FF2A2A;
+}
+
+.mainvisual {
+  height: calc(100vh - 6.25rem);
+  position: relative;
+  margin-bottom: 10rem;
+}
+.mainvisual .text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 10;
+}
+.mainvisual .text .title {
+  font-size: 2.85rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-shadow: 0 3px 5px #fff;
+}
+.mainvisual .text .btn {
+  display: inline-block;
+  background-color: #FF2A2A;
+  border-bottom: 6px solid #9a0413;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+}
+.mainvisual .text .btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.mainvisual .text .btn::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+}
+.mainvisual .fade li {
+  width: 70%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+}
+.mainvisual .fade li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0px 0px 20px 20px #fff;
+}
+
+#reason .bg {
+  background-color: #FF2A2A;
+  padding: 5rem 0;
+}
+#reason .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: #fff;
+  padding: 5%;
+}
+#reason .slide img {
+  width: auto;
+  height: 4rem;
+  margin-right: 2rem;
+}
+#reason .slide .title {
+  color: #FF2A2A;
+  font-size: 1.75rem;
+  display: block;
+  font-weight: bold;
+}
+#reason .slide .text {
+  font-size: 1.15rem;
+  display: block;
+}
+#reason .inview-slide-left {
+  margin-bottom: 5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+#reason .inview-slide-right {
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  margin-left: auto;
+}/*# sourceMappingURL=style.css.map */

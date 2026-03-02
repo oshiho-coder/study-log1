@@ -1,0 +1,24 @@
+@use 'variables' as v;
+
+// ================================================
+// レスポンシブ
+// ================================================
+// @mixin pc {
+//     @media (max-width: ($pc)) {
+//         @content;
+//     }
+// }
+
+$sp: 900px;
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}

@@ -1,0 +1,112 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+@keyframes inview-balloon {
+
+0%{
+    transform: scale(0.1) ;
+    opacity: 0;
+}
+100%{
+    transform: scale(1) ;
+    opacity: 1;
+}
+}
+
+#voice {
+    margin-bottom: 8rem;
+
+    .item__left,
+    .item__right {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        opacity: 0;
+        margin-bottom: 4rem;   
+    }
+    
+    .item__right {
+        justify-content: flex-end;
+    }
+    
+    .student {
+        text-align: center;
+        
+        img {
+            width: 8rem;
+            border-radius: 50%;
+            background-color: #CCCCCC;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+        
+        .name {
+            font-size: 0.75rem;
+        }
+    }
+    
+    .balloon__text {
+        width: 60%;
+        background-color: v.$balloon-bg;
+        border-radius: 10px;
+        padding: 1.5rem;
+        position: relative;
+        
+            &::before {
+                position: absolute;
+                content: "";
+                top: 60%;
+                border: 1rem solid transparent;
+            }            
+    }
+
+    .item__left .balloon__text::before {
+        right: 100%;
+        border-right-color: v.$balloon-bg;
+    }
+
+    .item__right .balloon__text::before {
+        left: 100%;
+        border-left-color: v.$balloon-bg;
+    }
+
+    .inview-balloon {
+        animation:  inview-balloon 1s ease-out 1 forwards;  
+    }
+
+    @include m.sp {
+        margin-bottom: 5rem;
+
+        .item__left {
+            flex-direction: column-reverse; 
+            align-items: center;           
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .item__right {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;           
+            margin-bottom: 2.5rem;
+        }
+        
+        .balloon__text {
+            width: 100%;
+        }
+
+        .item__left .balloon__text::before,
+        .item__right .balloon__text::before {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1rem solid transparent;
+            border-top-color: v.$balloon-bg;
+            right: auto;
+        }
+    }
+        
+}
+
+
+

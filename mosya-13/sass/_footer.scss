@@ -1,0 +1,42 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+footer {
+    background-color: #E8E8E8;
+    padding: 5rem 0 .5rem 0;
+    .inner {
+        margin-bottom: 8rem;
+        display: flex;
+        justify-content: space-between;
+
+        li{            
+            .title {
+                font-weight: bold;
+                font-size: 1.15rem;
+            }
+
+            .menu {
+                padding: 0.5rem 0 0 0.5rem;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 0.65rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    @include m.sp {
+        .inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            li {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,144 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+header{
+    padding: 2.5rem 0 0 3rem;
+    height: 6.25rem;
+
+    .site__title {
+        width: 6.25rem;
+
+        a {
+            display: block;
+        }
+    }
+
+    &.open {
+        #navi {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hamburger span {
+            background-color: v.$white;
+
+            &:nth-child(1) {
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+
+            &:nth-child(2) ,
+            &:nth-child(3) {
+                transform: rotate(45deg);
+                top: 50%;
+            }
+        }
+    }
+}
+
+.hamburger {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: v.$red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @include m.sp {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+    
+    span {
+        width: 50%;
+        height: 2px;
+        background-color: v.$white;
+        position: absolute;
+        display: block;
+        left: 25%;
+        transition: all 0.3s;
+        
+        &:nth-child(1) {
+            top: 36%;
+        }
+        
+        &:nth-child(2) {
+            top: 50%;
+        }
+        
+        &:nth-child(3) {
+            top: 64%;
+        }
+    }
+}
+
+#navi {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    background-color: v.$red;
+    color: v.$white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    text-align: center;
+    transition: all 0.6s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    .logo {
+        width: 6.25rem;
+        position: absolute;
+        top: 2.5rem;
+        left: 3rem;
+    }
+
+    .menu {
+        margin: 4rem 0 2.5rem;
+
+        li{
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: v.$white;
+            font-weight: bold;
+        }
+    }
+
+    .btn{
+            width: 15rem;
+            border: solid 1px v.$white;
+            color: v.$white;
+            display: inline-block;
+            font-weight: bold;
+            padding: 1rem 0;
+            transition: 0.3s;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 15rem;
+                border-right: solid 1px v.$white; 
+                border-bottom: solid 1px v.$white; 
+                padding: 1rem;
+                right: -0.5rem;
+                bottom: -0.5rem;
+            }
+            
+            &:hover {
+                background-color: v.$white;
+                color: v.$red;
+            } 
+    }
+}
+
